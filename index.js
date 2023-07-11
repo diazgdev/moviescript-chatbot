@@ -25,7 +25,7 @@ setupTextarea.addEventListener("keydown", (event) => {
 function submitPitch() {
   if (setupTextarea.value) {
     const userInput = setupTextarea.value
-    setupInputContainer.innerHTML = `<img src="images/loading.svg" class="loading" id="loading">`
+    setupInputContainer.innerHTML = `<img src="/images/loading.svg" class="loading" id="loading">`
     movieBossText.innerText = `Ok, just wait a second while my digital brain digests that...`
     fetchBotReply(userInput)
     fetchSynopsis(userInput)
