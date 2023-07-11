@@ -1,4 +1,4 @@
-import { process } from '/env'
+// import { process } from '/env'
 import { Configuration, OpenAIApi } from 'openai'
 
 const setupTextarea = document.getElementById('setup-textarea')
