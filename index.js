@@ -1,4 +1,3 @@
-// import { process } from '/env'
 import { Configuration, OpenAIApi } from 'openai'
 
 const setupTextarea = document.getElementById('setup-textarea')
@@ -7,7 +6,6 @@ const movieBossText = document.getElementById('movie-boss-text')
 const sendBtn = document.getElementById("send-btn");
 
 const configuration = new Configuration({
-  // apiKey: process.env.OPENAI_API_KEY
   apiKey: import.meta.env.VITE_OPENAI_API_KEY
 })
 
@@ -54,7 +52,6 @@ async function fetchBotReply(outline) {
     max_tokens: 60
   })
   movieBossText.innerText = response.data.choices[0].text.trim()
-  console.log(response)
 }
 
 async function fetchSynopsis(outline) {
@@ -95,7 +92,6 @@ async function fetchStars(synopsis) {
     max_tokens: 25,
   })
   document.getElementById('output-stars').innerText = response.data.choices[0].text.trim()
-  console.log("Stars: ", response)
 }
 
 async function fetchImagePromtp(title, synopsis) {

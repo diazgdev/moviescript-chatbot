@@ -19,6 +19,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('images/wall-e.jpg');
+    background-attachment: fixed;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -218,9 +219,10 @@ img.loading {
 .output-container {
     display: none;
     flex-direction: column;
-    margin: 1em auto;
+    margin: 5em auto;
     color: var(--dark);
     padding: 1em;
+    margin-top: 400px;
 }
 
 .output-img-container>img {
